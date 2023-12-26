@@ -1,0 +1,111 @@
+{% extends "base.html" %} {% block body %}
+<div class="container my-5">
+  <div class="section-title">
+    <h2>About Project</h2>
+  </div>
+  <blockquote class="blockquote mx-5 my-5">
+    <p>
+      Malicious Attacks on data which may appear normal to humans but causes
+      misclassification in a machine learning pipeline.
+    </p>
+  </blockquote>
+
+  <section class="testimonials section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Group Members</h2>
+        <br />
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-2">
+          <div class="testimonial-item">
+            <img src="/static/hasib.jpeg" class="testimonial-img" alt="" />
+            <h3>Hasib Aslam</h3>
+            <h4>Machine Learning Engineer</h4>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="testimonial-item">
+            <img src="/static/mubashir.jpeg" class="testimonial-img" alt="" />
+            <h3>M. Mubashir Zaman</h3>
+            <h4>Front End Engineer</h4>
+          </div>
+        </div>
+
+        <div class="col-md-2" data-aos="fade-up">
+          <div class="testimonial-item">
+            <img src="/static/aon.jpg" class="testimonial-img" alt="" />
+            <h3>Syed Aon Raza</h3>
+            <h4>Model Analyst</h4>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="testimonial-item">
+            <img src="/static/sunam.jpeg" class="testimonial-img" alt="" />
+            <h3>Muhammad Sunaam</h3>
+            <h4>Back-End Developer</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <div class="section-title">
+    <h2>About Project</h2>
+  </div>
+  <section class="services">
+    <div class="container">
+      <br />
+
+      <div class="row">
+        <div class="col-lg-6 col-md-12 icon-box" data-aos="fade-up">
+          <div class="icon"><i class="material-icons">error_outline</i></div>
+          <h4 class="title">Select Attack Method</h4>
+          <p class="description">
+            Users can choose between two adversarial attack methods
+          </p>
+        </div>
+        <div
+          class="col-lg-6 col-md-12 icon-box"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="icon"><i class="material-icons">collections</i></div>
+          <h4 class="title">Upload Image</h4>
+          <p class="description">
+            Users can upload an image in PNG, JPG, or JPEG format to perform the
+            adversarial attack.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-12 icon-box" data-aos="fade-up">
+          <div class="icon"><i class="material-icons">mms</i></div>
+          <h4 class="title">Generate Adverserial Image</h4>
+          <p class="description">
+            Upon uploading the image, the application generates the adversarial
+            image based on the selected attack method and displays the original
+            and adversarial images.
+          </p>
+        </div>
+        <div
+          class="col-lg-6 col-md-12 icon-box"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="icon"><i class="material-icons">dvr</i></div>
+          <h4 class="title">View Predictions</h4>
+          <p class="description">
+            The results page shows the original and adversarial images along
+            with any additional information, such as predictions or
+            classification results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% endblock body %}

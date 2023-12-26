@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="container my-5">
+<section class="services">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Features</h2>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 icon-box" data-aos="fade-up">
+        <div class="icon"><i class="material-icons">error_outline</i></div>
+        <h4 class="title">Select Attack Method</h4>
+        <p class="description">Users can choose between two adversarial attack methods </p>
+      </div>
+      <div class="col-lg-6 col-md-12 icon-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon"><i class="material-icons">collections</i></div>
+        <h4 class="title">Upload Image</h4>
+        <p class="description">Users can upload an image in PNG, JPG, or JPEG format to perform the adversarial attack.</p>
+      </div>
+      <div class="col-lg-6 col-md-12 icon-box" data-aos="fade-up">
+          <div class="icon"><i class="material-icons">mms</i></div>
+          <h4 class="title">Generate Adverserial Image</h4>
+          <p class="description">Upon uploading the image, the application generates the adversarial image based on the selected attack method and displays the original and adversarial images.</p>
+        </div>
+        <div class="col-lg-6 col-md-12 icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon"><i class="material-icons">dvr</i></div>
+          <h4 class="title">View Predictions</h4>
+          <p class="description">The results page shows the original and adversarial images along with any additional information, such as predictions or classification results.</p>
+        </div>
+      
+    </div>
+
+  </div>
+  </section>
+</div>
+
+{% endblock body %}

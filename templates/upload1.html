@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block body %}
+    
+<div class="d-grid gap-2 col-4 mx-auto my-5">
+    <form class="form-control" action="/upload1" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*">
+            <input type="submit" class="btn btn-outline-success" value="Upload">
+        </form>
+
+</div>
+
+
+    {% if image_path %}
+    
+    
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col mx-auto">
+            <div class="card h-100">
+                <img src="{{ image_path }}" class="card-img-top" alt="..." style="max-height: 300px; max-width: 150%;" data-bs-toggle="modal" data-bs-target="#originalImageModal">
+                <div class="card-body">
+                    <h5 class="card-title">Original Image</h5>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col mx-auto">
+            <div class="card h-100">
+                <img src="{{ image_path }}" class="card-img-top" alt="..." style="max-height: 300px; max-width: 150%;" data-bs-toggle="modal" data-bs-target="#noiseImageModal">
+                <div class="card-body">
+                    <h5 class="card-title">Image with Noise</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Full Image Modal -->
+    <div class="modal fade" id="originalImageModal" tabindex="-1" aria-labelledby="fullImageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="originalImageModalLabel">Original Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ image_path }}" class="img-fluid" alt="Full-sized Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="noiseImageModal" tabindex="-1" aria-labelledby="fullImageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="noiseImageModalLabel">Image with Noise</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ image_path }}" class="img-fluid" alt="Full-sized Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    {% endif %}
+    {% endblock body %}
